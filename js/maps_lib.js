@@ -13,12 +13,12 @@
 
         // Found at https://console.developers.google.com/
         // Important! this key is for demonstration purposes. please register your own.
-        this.googleApiKey = options.googleApiKey || "",
+        this.googleApiKey = options.googleApiKey || "AIzaSyAzlB1QOQg4-aR0SgYKIuPxUnKlBWLSxLg",
         
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "Location";
+        this.locationColumn = options.locationColumn || "location";
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "";
@@ -165,9 +165,9 @@
         //-----custom filters-----
        var type_column = "'Post'";
 var tempWhereClause = [];
-if ( $("#cbType1").is(':checked')) tempWhereClause.push("Paper Post");
-if ( $("#cbType2").is(':checked')) tempWhereClause.push("Post Home");
-if ( $("#cbType3").is(':checked')) tempWhereClause.push("Post With Canteen");
+if ( $("#cbType1").is(':checked')) tempWhereClause.push("'Paper Post'");
+if ( $("#cbType2").is(':checked')) tempWhereClause.push("'Post Home'");
+if ( $("#cbType3").is(':checked')) tempWhereClause.push("'Post With Canteen'");
 self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
