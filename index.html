@@ -80,6 +80,16 @@
     </label>
   </li>
 </ul>
+            
+            var type_column = "'type'";
+var tempWhereClause = [];
+if ( $("#cbType1").is(':checked')) tempWhereClause.push("Healthcare");
+if ( $("#cbType2").is(':checked')) tempWhereClause.push("Property");
+if ( $("#cbType3").is(':checked')) tempWhereClause.push("Public");
+if ( $("#cbType4").is(':checked')) tempWhereClause.push("Other");
+self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
+            
+            
             <br />
             <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
