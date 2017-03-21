@@ -165,9 +165,9 @@
         //-----custom filters-----
        var type_column = "'Post'";
 var tempWhereClause = [];
-if ( $("#cbType1").is(':checked')) tempWhereClause.push("'Paper Post'");
-if ( $("#cbType2").is(':checked')) tempWhereClause.push("'Post Home'");
-if ( $("#cbType3").is(':checked')) tempWhereClause.push("'Post With Canteen'");
+if ( $("#cbType1").is(':checked')) tempWhereClause.push("'Post With Canteen");
+if ( $("#cbType2").is(':checked')) tempWhereClause.push("Post Home");
+if ( $("#cbType3").is(':checked')) tempWhereClause.push("Paper Post");
 self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
