@@ -163,7 +163,7 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-       var type_column = "'type'";
+       var type_column = "'Type of Post'";
 var tempWhereClause = [];
 if ( $("#cbType1").is(':checked')) tempWhereClause.push("Paper Post");
 if ( $("#cbType2").is(':checked')) tempWhereClause.push("Post Home");
