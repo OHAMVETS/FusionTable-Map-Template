@@ -168,6 +168,7 @@ var tempWhereClause = [];
 if ( $("#cbType1").is(':checked')) tempWhereClause.push("canteen");
 if ( $("#cbType2").is(':checked')) tempWhereClause.push("home");
 if ( $("#cbType3").is(':checked')) tempWhereClause.push("paper");
+if ( $("#cbType4").is(':checked')) tempWhereClause.push("headquarters");
 self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
